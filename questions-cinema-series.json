@@ -89,6 +89,170 @@
                 "Disney",
                 "Blue Sky Studios"
             ]
+        },
+
+        {
+            "question": "Devinez le film : Quel film de 1994 raconte l'histoire d'un homme simple d'esprit mais au grand cœur, qui traverse les événements marquants des États-Unis ?",
+            "bonne_reponse": "Forrest Gump",
+            "mauvaises_reponses": [
+                "Pulp Fiction",
+                "The Shawshank Redemption",
+                "The Lion King"
+            ]
+        },
+        {
+            "question": "Devinez la série : Quelle série suit les aventures d\"un groupe de scientifiques travaillant au Caltech et vivant à Pasadena, en Californie ?",
+            "bonne_reponse": "The Big Bang Theory",
+            "mauvaises_reponses": [
+                "Friends",
+                "How I Met Your Mother",
+                "Silicon Valley"
+            ]
+        },
+        {
+            "question": "Acteurs et actrices : Qui a joué le rôle principal dans le film Gladiator ?",
+            "bonne_reponse": "Russell Crowe",
+            "mauvaises_reponses": [
+                "Joaquin Phoenix",
+                "Brad Pitt",
+                "Tom Cruise"
+            ]
+        },
+        {
+            "question": "Réalisateurs : Quel réalisateur est connu pour ses films comme Pulp Fiction, Kill Bill et Django Unchained ?",
+            "bonne_reponse": "Quentin Tarantino",
+            "mauvaises_reponses": [
+                "Martin Scorsese",
+                "Steven Spielberg",
+                "Christopher Nolan"
+            ]
+        },
+        {
+            "question": "Bandes originales : Quelle chanson de Whitney Houston est devenue célèbre grâce au film The Bodyguard ?",
+            "bonne_reponse": "I Will Always Love You",
+            "mauvaises_reponses": [
+                "Greatest Love of All",
+                "I Have Nothing",
+                "Run to You"
+            ]
+        },
+        {
+            "question": "Oscars : Quel film a remporté l'Oscar du meilleur film en 2019 ?",
+            "bonne_reponse": "Green Book",
+            "mauvaises_reponses": [
+                "Bohemian Rhapsody",
+                "Roma",
+                "A Star Is Born"
+            ]
+        },
+        {
+            "question": "Séries cultes : Dans quelle série peut-on suivre les aventures de Don Draper, un publicitaire travaillant dans une agence de publicité new-yorkaise dans les années 1960 ?",
+            "bonne_reponse": "Mad Men",
+            "mauvaises_reponses": [
+                "Suits",
+                "The Office",
+                "Boardwalk Empire"
+            ]
+        },
+        {
+            "question": "Citations célèbres : Je vais lui faire une offre qu'il ne pourra pas refuser.",
+            "bonne_reponse": "Le Parrain (The Godfather)",
+            "mauvaises_reponses": [
+                "Scarface",
+                "Goodfellas",
+                "Casino"
+            ]
+        },
+        {
+            "question": "Personnages : Quel est le nom du personnage principal dans la série “House” interprété par Hugh Laurie ?",
+            "bonne_reponse": "Dr. Gregory House",
+            "mauvaises_reponses": [
+                "Dr. James Wilson",
+                "Dr. Eric Foreman",
+                "Dr. Robert Chase"
+            ]
+        },
+        {
+            "question": "Films d\"animation : Quel studio a produit les films Shrek, Madagascar et Kung Fu Panda ?",
+            "bonne_reponse": "DreamWorks Animation",
+            "mauvaises_reponses": [
+                "Pixar",
+                "Disney Animation Studios",
+                "Blue Sky Studios"
+            ]
+        },
+        {
+            "question": "Devinez le film : Quel film de 1999 raconte l'histoire d'un programmeur informatique qui découvre que la réalité telle qu'il la connaît est une simulation créée par des machines intelligentes ?",
+            "bonne_reponse": "The Matrix",
+            "mauvaises_reponses": [
+                "Blade Runner",
+                "Total Recall",
+                "Minority Report"
+            ]
+        },
+        {
+            "question": "Devinez la série : Quelle série suit les aventures d'un groupe de survivants après une apocalypse zombie ?",
+            "bonne_reponse": "The Walking Dead",
+            "mauvaises_reponses": [
+                "Z Nation",
+                "Fear the Walking Dead",
+                "iZombie"
+            ]
+        },
+        {
+            "question": "Acteurs et actrices : Qui a joué le rôle principal dans le film The Revenant ?",
+            "bonne_reponse": "Leonardo DiCaprio",
+            "mauvaises_reponses": [
+                "Tom Hardy",
+                "Brad Pitt",
+                "Christian Bale"
+            ]
+        },
+        {
+            "question": "Réalisateurs : Quel réalisateur est connu pour ses films comme Jurassic Park, E.T et Jaws ?",
+            "bonne_reponse": "Steven Spielberg",
+            "mauvaises_reponses": [
+                "James Cameron",
+                "George Lucas",
+                "Ridley Scott"
+            ]
+        },
+        {
+            "question": "Bandes originales : Quelle chanson de Elton John est devenue célèbre grâce au film Le Roi Lion ?",
+            "bonne_reponse": "Can You Feel the Love Tonight",
+            "mauvaises_reponses": [
+                "Circle of Life",
+                "Hakuna Matata",
+                "I Just Can't Wait to Be King"
+            ]
+        },
+        {
+            "question": "Oscars : Quel film a remporté l'Oscar du meilleur film en 2018 ?",
+            "bonne_reponse": "The Shape of Water",
+            "mauvaises_reponses": [
+                "Three Billboards Outside Ebbing, Missouri",
+                "Get Out",
+                "Lady Bird"
+            ]
+        },
+        {
+            "question": "Séries cultes : Dans quelle série peut-on suivre les aventures de Tony Soprano, un chef de la mafia italo-américaine ?",
+            "bonne_reponse": "The Sopranos",
+            "mauvaises_reponses": [
+                "Boardwalk Empire",
+                "Peaky Blinders",
+                "Ray Donovan"
+            ]
+        },
+        {
+            "question": "Citations célèbres : Houston, nous avons un problème.",
+            "bonne_reponse": "Apollo 13",
+            "mauvaises_reponses": [
+                "Gravity",
+                "The Martian",
+                "Interstellar"
+            ]
         }
+
     ]
 }
