@@ -6,12 +6,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <script src="https://cdn.tailwindcss.com"></script>
-    <script src="main.js" defer></script>
 </head>
 
 <body>
 
-    <h1> Quizz</h1>
+    <h1 class="text-3xl font-bold underline"> Quizz</h1>
 
     <nav>
         <ul>
@@ -27,63 +26,6 @@
         </ul>
     </nav>
 
-
-    <div class="relative" data-twe-dropdown-ref>
-        <button
-          class="flex items-center rounded bg-primary px-6 pb-2 pt-2.5 text-xs font-medium uppercase leading-normal text-white shadow-primary-3 transition duration-150 ease-in-out hover:bg-primary-accent-300 hover:shadow-primary-2 focus:bg-primary-accent-300 focus:shadow-primary-2 focus:outline-none focus:ring-0 active:bg-primary-600 active:shadow-primary-2 motion-reduce:transition-none dark:shadow-black/30 dark:hover:shadow-dark-strong dark:focus:shadow-dark-strong dark:active:shadow-dark-strong"
-          type="button"
-          id="dropdownMenuButton1"
-          data-twe-dropdown-toggle-ref
-          aria-expanded="false"
-          data-twe-ripple-init
-          data-twe-ripple-color="light">
-          Dropdown button
-          <span class="ms-2 w-2 [&>svg]:h-5 [&>svg]:w-5">
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              viewBox="0 0 20 20"
-              fill="currentColor">
-              <path
-                fill-rule="evenodd"
-                d="M5.23 7.21a.75.75 0 011.06.02L10 11.168l3.71-3.938a.75.75 0 111.08 1.04l-4.25 4.5a.75.75 0 01-1.08 0l-4.25-4.5a.75.75 0 01.02-1.06z"
-                clip-rule="evenodd" />
-            </svg>
-          </span>
-        </button>
-        <ul
-          class="absolute z-[1000] float-left m-0 hidden min-w-max list-none overflow-hidden rounded-lg border-none bg-white bg-clip-padding text-base shadow-lg data-[twe-dropdown-show]:block dark:bg-surface-dark"
-          aria-labelledby="dropdownMenuButton1"
-          data-twe-dropdown-menu-ref>
-          <li>
-            <a
-              class="block w-full whitespace-nowrap bg-white px-4 py-2 text-sm font-normal text-neutral-700 hover:bg-zinc-200/60 focus:bg-zinc-200/60 focus:outline-none active:bg-zinc-200/60 active:no-underline dark:bg-surface-dark dark:text-white dark:hover:bg-neutral-800/25 dark:focus:bg-neutral-800/25 dark:active:bg-neutral-800/25"
-              href="#"
-              data-twe-dropdown-item-ref
-              >Action</a
-            >
-          </li>
-          <li>
-            <a
-              class="block w-full whitespace-nowrap bg-white px-4 py-2 text-sm font-normal text-neutral-700 hover:bg-zinc-200/60 focus:bg-zinc-200/60 focus:outline-none active:bg-zinc-200/60 active:no-underline dark:bg-surface-dark dark:text-white dark:hover:bg-neutral-800/25 dark:focus:bg-neutral-800/25 dark:active:bg-neutral-800/25"
-              href="#"
-              data-twe-dropdown-item-ref
-              >Another action</a
-            >
-          </li>
-          <li>
-            <a
-              class="block w-full whitespace-nowrap bg-white px-4 py-2 text-sm font-normal text-neutral-700 hover:bg-zinc-200/60 focus:bg-zinc-200/60 focus:outline-none active:bg-zinc-200/60 active:no-underline dark:bg-surface-dark dark:text-white dark:hover:bg-neutral-800/25 dark:focus:bg-neutral-800/25 dark:active:bg-neutral-800/25"
-              href="#"
-              data-twe-dropdown-item-ref
-              >Something else here</a
-            >
-          </li>
-        </ul>
-      </div>
-
-
-      
-
     <article>
         <section>
             <div id="question-container">
@@ -97,9 +39,24 @@
         </section>
     </article>
 
-    <button type="submit" id="suivant">Suivant</button>
+    <button class="flex items-center rounded bg-blue-600 hover:bg-sky-700 active:bg-violet-700 focus:outline-none focus:ring focus:ring-violet-300 px-6 pb-2 pt-2.5" type="submit" id="suivant" >
+        Suivant
+        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
+            <path class="text-white" stroke-linecap="round" stroke-linejoin="round" d="m9 12.75 3 3m0 0 3-3m-3 3v-7.5M21 12a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z" />
+          </svg> 
+        </button>
 
 
+        
+    
+
+
+    
+
+
+
+
+      <script src="main.js"></script>
 </body>
 
 </html>
