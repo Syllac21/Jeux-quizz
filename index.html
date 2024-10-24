@@ -10,53 +10,101 @@
 
 <body>
 
-    <h1 class="text-3xl font-bold underline"> Quizz</h1>
+    <header>
+        <h1 class="text-center text-xl m-4"> Quizz</h1>
 
-    <nav>
-        <ul>
-            <li><a href="#">Accueil</a></li>
-            <li class="dropdown">
-                <a href="#" class="dropbtn">Choisir un thème</a>
-                <div class="dropdown-content">
-                    <a href="#" data-theme="">theme</a>
-                    <a href="#" data-theme="">theme</a>
-                    <a href="#" data-theme="">theme</a>
+        <nav class="hs-dropdown relative flex justify-around m-3">
+            <button id="default" type="button"
+                class="py-3 px-4 inline-flex items-center gap-x-2 text-sm font-medium rounded-lg border border-gray-200 bg-white text-gray-100 shadow-sm hover:bg-gray-50 focus:outline-none focus:bg-gray-50 disabled:opacity-50 disabled:pointer-events-none dark:bg-neutral-800 dark:border-neutral-700 dark:text-white dark:hover:bg-neutral-700 dark:focus:bg-neutral-700"
+                aria-haspopup="menu" aria-expanded="false" aria-label="">
+                <a href="index.html">Acceuil</a>
+            </button>
+
+            <button id="hs-dropdown-default" type="button"
+                class="hs-dropdown-toggle py-3 px-4 inline-flex items-center gap-x-2 text-sm font-medium rounded-lg border border-gray-200 bg-white text-gray-100 shadow-sm hover:bg-gray-50 focus:outline-none focus:bg-gray-50 disabled:opacity-50 disabled:pointer-events-none dark:bg-neutral-800 dark:border-neutral-700 dark:text-white dark:hover:bg-neutral-700 dark:focus:bg-neutral-700"
+                aria-haspopup="menu" aria-expanded="false" aria-label="Dropdown">
+                Thème
+                <svg class="hs-dropdown-open:rotate-180 size-4" xmlns="http://www.w3.org/2000/svg" width="24"
+                    height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                    stroke-linecap="round" stroke-linejoin="round">
+                    <path d="m6 9 6 6 6-6" />
+                </svg>
+            </button>
+
+            <button id="default" type="button"
+                class="py-3 px-4 inline-flex items-center gap-x-2 text-sm font-medium rounded-lg border border-gray-200 bg-white text-gray-100 shadow-sm hover:bg-gray-50 focus:outline-none focus:bg-gray-50 disabled:opacity-50 disabled:pointer-events-none dark:bg-neutral-800 dark:border-neutral-700 dark:text-white dark:hover:bg-neutral-700 dark:focus:bg-neutral-700"
+                aria-haspopup="menu" aria-expanded="false" aria-label="">
+                <a href="index.html">Inscription</a>
+            </button>
+
+            <ul class="hs-dropdown-menu transition-[opacity,margin] duration hs-dropdown-open:opacity-100 opacity-0 hidden min-w-60 bg-white shadow-md rounded-lg mt-2 dark:bg-neutral-800 dark:border dark:border-neutral-700 dark:divide-neutral-700 after:h-4 after:absolute after:-bottom-4 after:start-0 after:w-full before:h-4 before:absolute before:-top-4 before:start-0 before:w-full"
+                role="menu" aria-orientation="vertical" aria-labelledby="hs-dropdown-default">
+                <div class="p-1 space-y-0.5">
+                    <li
+                        class="flex items-center gap-x-3.5 py-2 px-3 rounded-lg text-sm text-gray-100 hover:bg-gray-100">
+                        1
+                    </li>
+                    <li
+                        class="flex items-center gap-x-3.5 py-2 px-3 rounded-lg text-sm text-gray-100 hover:bg-gray-100">
+                        2
+                    </li>
+                    <li
+                        class="flex items-center gap-x-3.5 py-2 px-3 rounded-lg text-sm text-gray-100 hover:bg-gray-100">
+                        3
+                    </li>
+                    <li
+                        class="flex items-center gap-x-3.5 py-2 px-3 rounded-lg text-sm text-gray-100 hover:bg-gray-100">
+                        4
+                    </li>
                 </div>
-            </li>
-        </ul>
-    </nav>
+            </ul>
+        </nav>
+    </header>
+    <main class="border border-blue-500 m-5 bg-stone-100">
 
-    <article>
-        <section>
-            <div id="question-container">
-                Questions du quiz ici
-            </div>
-        </section>
-        <section>
-            <div id="reponse-container">
-                Réponses du quizz ici
-            </div>
-        </section>
-    </article>
-
-    <button class="flex items-center rounded bg-blue-600 hover:bg-sky-700 active:bg-violet-700 focus:outline-none focus:ring focus:ring-violet-300 px-6 pb-2 pt-2.5" type="submit" id="suivant" >
-        Suivant
-        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
-            <path class="text-white" stroke-linecap="round" stroke-linejoin="round" d="m9 12.75 3 3m0 0 3-3m-3 3v-7.5M21 12a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z" />
-          </svg> 
-        </button>
-
-
+        <article class="">
+            <section class="grid justify-center border border-blue-500 m-5">
+                <div class="m-5 grid justify-center" id="question-container">
+                    Questions du quiz ici :
+                </div>
+            </section>
+            <section class="border border-red-500 mr-16 ml-16"></section>
+            <section class="grid justify-center border border-blue-500 m-5">
+                <div class="m-5 grid justify-center" id="reponse-container">
+                    <!-- Réponses du quizz ici : -->
+                    <button>1</button>
+                    <button>2</button>
+                    <button>3</button>
+                    <button>4</button>
+                </div>
+            </section>
+            <section class="border border-blue-500 m-5 text-center">
+                Bonne ou mauvaise réponse affiché ici
+            </section>
+        </article>
         
-    
+        <article class="flex m-5">
+            <section class="grid justify-start m-5 ">
+                <section>Difficulté du thèmee :</section>
+                <section>Difficulté de la question :</section>
+                <section>Nombre de questions : (quelle question on est)</section>
+                <section>compteur bonne réponse : exemple 5/10 voir %</section>
+            </section>
 
+            <button
+                class="m-5 flex items-center rounded text-white bg-blue-600 hover:bg-sky-700 active:bg-violet-700 focus:outline-none focus:ring focus:ring-violet-300 px-6 pb-2 pt-2.5"
+                type="submit" id="suivant">
+                Suivant
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                    stroke="currentColor" class="size-6">
+                    <path class="text-white" stroke-linecap="round" stroke-linejoin="round"
+                        d="m9 12.75 3 3m0 0 3-3m-3 3v-7.5M21 12a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z" />
+                </svg>
+            </button>
+        </article>
+    </main>
 
-    
-
-
-
-
-      <script src="main.js"></script>
+    <script src="main.js"></script>
 </body>
 
 </html>
