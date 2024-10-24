@@ -1,0 +1,12 @@
+{
+    "question1": {
+      "question": "Quelle est la capitale de la France ?",
+      "mauvaises_reponses": ["Paris", "Lyon", "Marseille", "Nice"],
+      "bonne_reponse": "Paris"
+    },
+    "question2": {
+      "question": "Quel est le plus grand océan ?",
+      "mauvaises_reponses": ["Atlantique", "Pacifique", "Indien", "Arctique"],
+      "bonne_reponse": "Pacifique"
+    }
+  }
