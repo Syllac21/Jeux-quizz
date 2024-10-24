@@ -1,0 +1,94 @@
+{
+    "quiz": [
+        {
+            "question": "Devinez le film : Je suis le roi du monde !",
+            "bonne_reponse": "Titanic",
+            "mauvaises_reponses": [
+                "Gladiator",
+                "Braveheart",
+                "The Matrix"
+            ]
+        },
+        {
+            "question": "Devinez la série : Quelle série met en scène un groupe d'amis vivant à New York et fréquentant régulièrement le Central Perk ?",
+            "bonne_reponse": "Friends",
+            "mauvaises_reponses": [
+                "How I Met Your Mother",
+                "Seinfeld",
+                "The Big Bang Theory"
+            ]
+        },
+        {
+            "question": "Acteurs et actrices : Qui a joué le rôle principal dans le film Forrest Gump ?",
+            "bonne_reponse": "Tom Hanks",
+            "mauvaises_reponses": [
+                "Brad Pitt",
+                "Leonardo DiCaprio",
+                "Johnny Depp"
+            ]
+        },
+        {
+            "question": "Réalisateurs : Quel réalisateur est connu pour ses films comme Inception, The Dark Knight et Interstellar ?",
+            "bonne_reponse": "Christopher Nolan",
+            "mauvaises_reponses": [
+                "Steven Spielberg",
+                "Quentin Tarantino",
+                "James Cameron"
+            ]
+        },
+        {
+            "question": "Bandes originales : Quelle chanson de Céline Dion est devenue célèbre grâce au film Titanic ?",
+            "bonne_reponse": "My Heart Will Go On",
+            "mauvaises_reponses": [
+                "The Power of Love",
+                "Because You Loved Me",
+                "It's All Coming Back to Me Now"
+            ]
+        },
+        {
+            "question": "Oscars : Quel film a remporté l'Oscar du meilleur film en 2020 ?",
+            "bonne_reponse": "Parasite",
+            "mauvaises_reponses": [
+                "1917",
+                "Joker",
+                "Once Upon a Time in Hollywood"
+            ]
+        },
+        {
+            "question": "Devinez la série : Dans quelle série peut-on suivre les aventures de Walter White, un professeur de chimie devenu fabricant de méthamphétamine ?",
+            "bonne_reponse": "Breaking Bad",
+            "mauvaises_reponses": [
+                "Narcos",
+                "The Sopranos",
+                "Mad Men"
+            ]
+        },
+        {
+            "question": "Devinez le film : Que la Force soit avec toi.",
+            "bonne_reponse": "Star Wars",
+            "mauvaises_reponses": [
+                "Star Trek",
+                "The Matrix",
+                "Guardians of the Galaxy"
+            ]
+        },
+        {
+            "question": "Personnages : Quel est le nom du personnage principal dans la série Sherlock interprété par Benedict Cumberbatch ?",
+            "bonne_reponse": "Sherlock Holmes",
+            "mauvaises_reponses": [
+                "John Watson",
+                "Mycroft Holmes",
+                "Moriarty"
+            ]
+        },
+        {
+            "question": "Films d'animation : Quel studio a produit les films Toy Story, Finding Nemo et The Incredibles ?",
+            "bonne_reponse": "Pixar",
+            "mauvaises_reponses": [
+                "DreamWorks",
+                "Disney",
+                "Blue Sky Studios"
+            ]
+        }
+    ]
+}
