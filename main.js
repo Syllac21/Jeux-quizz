@@ -1,28 +1,43 @@
 
 const root = document.getElementById('root');
+const zoneQuizz =  document.createElement('session');
 const questionDiv = document.createElement('div');
 const reponse1 = document.createElement('div');
 const reponse2 = document.createElement('div');
 const reponse3 = document.createElement('div');
 const reponse4 = document.createElement('div');
+const begin = document.createElement('div');
+const btnSuivant = document.createElement('div');
 reponse1.setAttribute('class' , 'reponse');
 reponse2.setAttribute('class' , 'reponse');
 reponse3.setAttribute('class' , 'reponse');
 reponse4.setAttribute('class' , 'reponse');
-root.appendChild(questionDiv);
-root.appendChild(reponse1);
-root.appendChild(reponse2);
-root.appendChild(reponse3);
-root.appendChild(reponse4);
-const begin = document.createElement('div');
-begin.setAttribute('class' , 'transition duration-300 ease-in-out bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded w-1/6 mx-auto');
-begin.innerHTML = 'Jouer';
+
+zoneQuizz.appendChild(questionDiv);
+zoneQuizz.appendChild(reponse1);
+zoneQuizz.appendChild(reponse2);
+zoneQuizz.appendChild(reponse3);
+zoneQuizz.appendChild(reponse4);
+root.appendChild(zoneQuizz);
 root.appendChild(begin);
+root.appendChild(btnSuivant);
+
+let classBtn = 'transition duration-300 ease-in-out bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded w-1/6 mx-auto '
+let derniereQuest = false;
+
+begin.setAttribute('class' , classBtn);
+btnSuivant.setAttribute('class' , classBtn + 'hidden')
+
+begin.innerHTML = 'Jouer';
+btnSuivant.innerHTML = "suivant";
+
 const reponsesDiv = document.querySelectorAll('.reponse');
 let j = false;
-
+let nbQuest = 0;
 let brep = '';
 let clicked = false;
+let score = 0;
+
 
 
 
@@ -79,20 +94,40 @@ begin.addEventListener('click', () =>{
     if(j){
         console.log(j);
         displayQuestions().then(tableQuestions => {
-            brep = tableQuestions[0].bonne_reponse;
-            let tabReponse = melangeReponse(brep, tableQuestions[0].mauvaises_reponses);
-            console.log(tableQuestions[0]);
-            afficheQuestion(tableQuestions[0].Question, tabReponse);
-            
+            brep = tableQuestions[nbQuest].bonne_reponse;
+            let tabReponse = melangeReponse(brep, tableQuestions[nbQuest].mauvaises_reponses);
+            console.log(tableQuestions[nbQuest]);
+            afficheQuestion(tableQuestions[nbQuest].Question, tabReponse);
+            begin.classList.add('hidden');
         })
-    }
-    afficheQuestion()
-} 
-    
-)
+    }   
+})
 
-function afficheLesQuestion(){
-}
+btnSuivant.addEventListener('click', () =>{
+    j = true;
+    clicked = false;
+    reponse1.setAttribute('class' , 'reponse');
+    reponse2.setAttribute('class' , 'reponse');
+    reponse3.setAttribute('class' , 'reponse');
+    reponse4.setAttribute('class' , 'reponse');
+    if(derniereQuest){
+        zoneQuizz.classList.add('hidden');
+        btnSuivant.classList.add('hidden');
+        root.innerHTML = `vous avez eu ${score} bonnes réponses`;
+    } else if(j){
+        
+        displayQuestions().then(tableQuestions => {
+            brep = tableQuestions[nbQuest].bonne_reponse;
+            let tabReponse = melangeReponse(brep, tableQuestions[nbQuest].mauvaises_reponses);
+            console.log(tableQuestions[nbQuest]);
+            afficheQuestion(tableQuestions[nbQuest].Question, tabReponse);
+            begin.classList.add('hidden');
+        })
+    }   
+    if(nbQuest === 9){
+        derniereQuest = true;
+    }
+})
 
 //______________________________________________________________________
 
@@ -132,15 +167,28 @@ const onClick = reponsesDiv.forEach((reponse) =>
     reponse.addEventListener('click', function() {
         if(!clicked){
             clicked = true;
-            console.log(clicked);
+            
             if(this.innerHTML === brep){
                 this.classList.add('bg-green-500');
+                btnSuivant.classList.remove('hidden');
+                if(derniereQuest){
+                    btnSuivant.innerHTML ='terminé'
+                }
+                nbQuest++;
+                j = false;
+                score++;
                 
             }else{
                 this.classList.add('bg-red-500');
-                
+                btnSuivant.classList.remove('hidden');
+                if(derniereQuest){
+                    btnSuivant.innerHTML ='terminé'
+                }
+                nbQuest++;
+                j = false;
             }
         }
+        console.log(clicked);
     })
 );
 
