@@ -11,54 +11,33 @@
 <body>
 
     <header>
-        <h1 class="text-center text-xl m-4"> Quizz</h1>
+        
 
-        <nav class="hs-dropdown relative flex justify-between m-3">
-            <button id="default" type="button"
-                class="py-3 px-4 inline-flex items-center gap-x-2 text-sm font-medium rounded-lg border border-gray-200 bg-white text-gray-100 shadow-sm hover:bg-gray-50 focus:outline-none focus:bg-gray-50 disabled:opacity-50 disabled:pointer-events-none dark:bg-neutral-800 dark:border-neutral-700 dark:text-white dark:hover:bg-neutral-700 dark:focus:bg-neutral-700"
-                aria-haspopup="menu" aria-expanded="false" aria-label="">
-                <a href="index.html">Acceuil</a>
-            </button>
-
-            <button id="hs-dropdown-default" type="button"
-                class="hs-dropdown-toggle py-3 px-4 inline-flex items-center gap-x-2 text-sm font-medium rounded-lg border border-gray-200 bg-white text-gray-100 shadow-sm hover:bg-gray-50 focus:outline-none focus:bg-gray-50 disabled:opacity-50 disabled:pointer-events-none dark:bg-neutral-800 dark:border-neutral-700 dark:text-white dark:hover:bg-neutral-700 dark:focus:bg-neutral-700"
-                aria-haspopup="menu" aria-expanded="false" aria-label="Dropdown">
-                Thème
-                <svg class="hs-dropdown-open:rotate-180 size-4" xmlns="http://www.w3.org/2000/svg" width="24"
-                    height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
-                    stroke-linecap="round" stroke-linejoin="round">
-                    <path d="m6 9 6 6 6-6" />
-                </svg>
-            </button>
-
-            <button id="default" type="button"
-                class="py-3 px-4 inline-flex items-center gap-x-2 text-sm font-medium rounded-lg border border-gray-200 bg-white text-gray-100 shadow-sm hover:bg-gray-50 focus:outline-none focus:bg-gray-50 disabled:opacity-50 disabled:pointer-events-none dark:bg-neutral-800 dark:border-neutral-700 dark:text-white dark:hover:bg-neutral-700 dark:focus:bg-neutral-700"
-                aria-haspopup="menu" aria-expanded="false" aria-label="">
-                <a href="index.html">Inscription</a>
-            </button>
-
-            <ul class="hs-dropdown-menu transition-[opacity,margin] duration hs-dropdown-open:opacity-100 opacity-0 hidden min-w-60 bg-white shadow-md rounded-lg mt-2 dark:bg-neutral-800 dark:border dark:border-neutral-700 dark:divide-neutral-700 after:h-4 after:absolute after:-bottom-4 after:start-0 after:w-full before:h-4 before:absolute before:-top-4 before:start-0 before:w-full"
-                role="menu" aria-orientation="vertical" aria-labelledby="hs-dropdown-default">
-                <div class="p-1 space-y-0.5">
-                    <li
-                        class="flex items-center gap-x-3.5 py-2 px-3 rounded-lg text-sm text-gray-100 hover:bg-gray-100">
-                        1
-                    </li>
-                    <li
-                        class="flex items-center gap-x-3.5 py-2 px-3 rounded-lg text-sm text-gray-100 hover:bg-gray-100">
-                        2
-                    </li>
-                    <li
-                        class="flex items-center gap-x-3.5 py-2 px-3 rounded-lg text-sm text-gray-100 hover:bg-gray-100">
-                        3
-                    </li>
-                    <li
-                        class="flex items-center gap-x-3.5 py-2 px-3 rounded-lg text-sm text-gray-100 hover:bg-gray-100">
-                        4
-                    </li>
+        <nav class="bg-gray-800 p-4">
+            <div class="flex justify-between text-center items-center">
+                <a href="index.html" class="text-white text-lg justify-start">Accueil</a>
+                <h1 class="text-white text-xl mr-8 ml-8 mt-4 mb-4 flex items-center justify-center">Quizz</h1>
+                <div class="md:hidden">
+                    <button id="burger" class="text-white focus:outline-none">
+                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path>
+                        </svg>
+                    </button>
                 </div>
+                <ul class="hidden md:flex space-x-4 justify-end">
+                  
+                    <li><a href="#" class="text-white">Thème</a></li>
+                    <li><a href="index.html" class="text-white">Inscription</a></li>
+                </ul>
+            </div>
+             
+            <ul id="menu" class="hidden md:hidden flex flex-col space-y-2 mt-4">
+                <div class="border border-red-600 "></div> 
+                <li><a href="#" class="text-white block mt-1">Thème</a></li>
+                <li><a href="index.html" class="text-white block">Inscription</a></li>
             </ul>
         </nav>
+        
     </header>
     <main class="border border-blue-500 m-5 bg-stone-100">
 
@@ -83,8 +62,8 @@
             </section>
         </article>
 
-        <article class="flex m-5">
-            <section class="grid justify-start m-5 ">
+        <article class="flex flex-col  md:flex-row m-5 justify-center items-center">
+            <section class="flex flex-col items-start m-5 ">
                 <section>Difficulté du thèmee :</section>
                 <section>Difficulté de la question :</section>
                 <section>Nombre de questions : (quelle question on est)</section>
@@ -93,7 +72,7 @@
 
 <!-- Probléme pour cenrer le bouton -->
             <button  
-                class="m-16 inline-flex items-center rounded text-white bg-blue-600 hover:bg-sky-700 active:bg-violet-700 focus:outline-none focus:ring focus:ring-violet-300 px-6 pb-2 pt-2.5"
+                class="m-16 flex flex-row justify-center text-center md:size-2/12 items-center rounded text-white bg-blue-600 hover:bg-sky-700 active:bg-violet-700 focus:outline-none focus:ring focus:ring-violet-300 px-6 pb-2 pt-2.5"
                 type="submit" id="suivant">
                 Suivant
                 <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
@@ -104,6 +83,12 @@
             </button>
         </article>
     </main>
+
+
+
+         
+
+
 
     <script src="main.js"></script>
 </body>
