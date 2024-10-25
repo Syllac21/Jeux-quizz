@@ -117,7 +117,16 @@ divs[2].textContent = "reponse 2";
 divs[3].textContent = "reponse 3";
 divs[4].textContent = "reponse 4";
 
+//console.log(divs[2].textContent);
 
+//boucle qui cree mon tableau reponses:
+let RepArray = [];
+
+for ( let i = 1; i < 5; i++){
+    RepArray.push(divs[i].textContent);
+}
+
+//console.log(RepArray);
 
 function MelangeQuestion(){
     let ChiffreAlea = Math.floor(Math.random() * 4);
