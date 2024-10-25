@@ -102,7 +102,7 @@ divs[0].textContent = "Question du quiz ici"
 
 //exemple
 section[1].appendChild(divs[1]);
-divs[1].textContent = "reponse1"; //appel de la fonction peut-etre
+divs[1].textContent = "reponse 1"; //appel de la fonction peut-etre
 divs[1].setAttribute("class", reponseStyle);
 
 section[1].appendChild(divs[2]);
@@ -121,10 +121,7 @@ divs[4].textContent = "reponse 4";
 
 function MelangeQuestion(){
     let ChiffreAlea = Math.floor(Math.random() * 4);
-    
 
-
-    
 
 }
 
