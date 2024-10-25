@@ -20,6 +20,7 @@ const navStyle = "";
 const navListStyle = "";
 const navLiStyle= "";
 const sectionStyle = "";
+const reponseStyle = "";
 
 //creation des elements html en js:
 
@@ -85,7 +86,7 @@ for (let i = 0; i < sectionNumber; i++){
 
 //Divs 
 
-let divNumber = 2;
+let divNumber = 5;
 let divs = [];
 
 for (let i = 0; i < divNumber; i++){
@@ -99,13 +100,30 @@ divs[0].textContent = "Question du quiz ici"
 
 //section 2
 
+//exemple
 section[1].appendChild(divs[1]);
-divs[1].textContent = "Reponses du quiz" //appel de la fonction peut-etre
+divs[1].textContent = "reponse1"; //appel de la fonction peut-etre
 divs[1].setAttribute("class", reponseStyle);
+
+section[1].appendChild(divs[2]);
+section[1].appendChild(divs[3]);
+section[1].appendChild(divs[4]);
+
+divs[2].setAttribute("class", reponseStyle);
+divs[3].setAttribute("class", reponseStyle);
+divs[4].setAttribute("class", reponseStyle);
+
+divs[2].textContent = "reponse 2";
+divs[3].textContent = "reponse 3";
+divs[4].textContent = "reponse 4";
 
 
 
 function MelangeQuestion(){
+    let ChiffreAlea = Math.floor(Math.random() * 4);
+    
+
+
     
 
 }
