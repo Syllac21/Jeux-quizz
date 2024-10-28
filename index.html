@@ -39,35 +39,57 @@
         </nav>
     </header>-->
 
-    <div class="bg-black flex justify-center">
+    <div class="bg-[#f2e6d7] flex justify-center pb-2">
         <img src="img/Designer1.jpeg" alt="le Quiz">
     </div>
 
-    <main class="border border-blue-500 m-5 bg-stone-100">
+    <main class="border border-gray-800 border-t-4 bg-stone-100">
 
-        <article class="flex justify-center text-center items-center">
-            <div class="bg-[url('./img/cinema-test.jfif')] bg-cover rounded-2xl m-5">
-                <!-- Votre contenu ici -->
-              
-            <section class=" rounded overflow-hidden shadow-lg flex flex-col text-center justify-center m-5">
-                    <h2 class="text-white font-bold  underline text-xl flex justify-center  text-center m-5">
+        <!-- theme element conteneur -->
+        <div id="theme" class="hidden md:hidden md:flex md:flex-row md:justify-center bg-[#ccbcaa]">
+            <article class="flex justify-center text-center items-center">
+                <div class="bg-[url('./img/cinema-test.jfif')] border-4 border-gray-800 bg-cover rounded-2xl m-5">
+                    <!-- Votre contenu ici -->
+                
+                <section class=" rounded overflow-hidden shadow-lg flex flex-col text-center justify-center m-5">
+                    <h2 class="text-3xl text-white font-bold  underline flex justify-center  text-center m-5">
                     Cinéma
                     </h2>
-                    <h2 class="m-5  text-white font-semibold text-center justify-center">
+                    <h2 class="m-5 text-xl text-white font-semibold text-center justify-center">
                     Difficulté:
                     </h2>
                     <ul class="flex flex-row justify-center m-5">
-                            <li> <button class=" bg-gray-200 rounded-full text-xl font-semibold text-gray-700 m-3 p-2">Facile</button></li>
-                            <li> <button class=" bg-gray-200 rounded-full text-xl font-semibold text-gray-700 m-3 p-2">Moyen</button></li>
-                            <li> <button class=" bg-gray-200 rounded-full text-xl font-semibold text-gray-700 m-3 p-2">Difficile</button></li>
+                            <li> <button class=" bg-gray-800 rounded-md text-xl font-semibold text-gray-200 m-3 p-2">Facile</button></li>
+                            <li> <button class=" bg-gray-800 rounded-md text-xl font-semibold text-gray-200 m-3 p-2">Moyen</button></li>
+                            <li> <button class=" bg-gray-800 rounded-md text-xl font-semibold text-gray-200 m-3 p-2">Difficile</button></li>
                     </ul> 
-            </section>
+                </section>
+            </div>
+            </article>
+            <!-- test kaique -->
+            <article class="flex justify-center text-center items-center">
+                <div class="bg-[url('./img/theme-sport.png')] border-4 border-gray-800 bg-cover rounded-2xl m-5">
+                    <!-- Votre contenu ici -->
+                
+                <section class=" rounded overflow-hidden shadow-lg flex flex-col text-center justify-center m-5">
+                    <h2 class="text-3xl text-white font-bold  underline flex justify-center  text-center m-5">
+                    Sports
+                    </h2>
+                    <h2 class="m-5 text-xl text-white font-semibold text-center justify-center">
+                    Difficulté:
+                    </h2>
+                    <ul class="flex flex-row justify-center m-5">
+                            <li> <button class=" bg-gray-800 rounded-md text-xl font-semibold text-gray-200 m-3 p-2">Facile</button></li>
+                            <li> <button class=" bg-gray-800 rounded-md text-xl font-semibold text-gray-200 m-3 p-2">Moyen</button></li>
+                            <li> <button class=" bg-gray-800 rounded-md text-xl font-semibold text-gray-200 m-3 p-2">Difficile</button></li>
+                    </ul> 
+                </section>
+            </div>
+            </article>
         </div>
-        </article>
-
         <article>
             <section class="grid justify-center border border-blue-500 m-5">
-                <h2 class="m-5 grid justify-center" id="question-container">
+                <h2 class="m-5 grid justify-center" id="question-container"> 
                     Questions du quiz ici :
                 </h2>
             </section>
@@ -94,7 +116,7 @@
                 <section>compteur bonne réponse : exemple 5/10 voir %</section>
             </section>
 
-            <button
+            <button  
                 class="m-16 flex flex-row justify-center text-center md:size-2/12 items-center rounded text-white bg-blue-600 hover:bg-sky-700 active:bg-violet-700 focus:outline-none focus:ring focus:ring-violet-300 px-6 pb-2 pt-2.5"
                 type="submit" id="suivant">
                 Suivant
@@ -106,6 +128,9 @@
             </button>
         </article>
     </main>
+    <script src="main.js"></script>
+</body>
+</html>
     <script src="main.js"></script>
 </body>
 
