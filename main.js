@@ -6,4 +6,3 @@ document.getElementById('burger').addEventListener('click', function() {
 
 // créer les éléments de la navbar
 document.createElement('header');
-document.
