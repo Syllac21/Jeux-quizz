@@ -1,6 +1,19 @@
+const listThemes = ['cinema-series', 'foot']
+const classThemes = 'mx-auto';
+const classThemesChoose = 'mx-auto bg-slate-600';
+const banner = document.createElement('header');
+const classBanner = 'bg-slate-900 text-white';
+banner.setAttribute('class' , classBanner);
+
+const navThemes = document.createElement('nav');
+const classNav ='flex justify-center items-center';
+navThemes.setAttribute('class' , classNav);
 
 const title = document.createElement('div');
 title.innerHTML = 'Le Quizz des semi-croustillants';
+
+let themeChosen = 'cinema';
+let chooseTheme = 'true'
 
 const root = document.getElementById('root');
 const zoneQuizz =  document.createElement('section');
@@ -11,9 +24,9 @@ const reponse3 = document.createElement('div');
 const reponse4 = document.createElement('div');
 const begin = document.createElement('div');
 const btnSuivant = document.createElement('div');
-classReponseQuizz = 'reponse class bg-slate-600 text-white text-center max-w-sm rounded overflow-hidden shadow-lg mx-auto mb-5 py-5 hover:bg-sky-700';
+classReponseQuizz = 'reponse class bg-slate-600 text-white text-center max-w-sm rounded overflow-hidden shadow-lg mx-auto mb-5 py-3 hover:bg-sky-700';
 classQuestion = 'card-title';
-classZoneQuizz = 'card border-2 border-slate-900 bg-slate-300 w-2/6 mx-auto hidden mt-5 rounded shadow-xl'
+classZoneQuizz = 'card border-2 border-slate-900 bg-slate-300 w-3/6 mx-auto hidden mt-5 rounded shadow-xl'
 classTitle ='text-center text-3xl mb-5';
 
 reponse1.setAttribute('class' , 'reponse');
@@ -29,12 +42,34 @@ zoneQuizz.appendChild(reponse1);
 zoneQuizz.appendChild(reponse2);
 zoneQuizz.appendChild(reponse3);
 zoneQuizz.appendChild(reponse4);
-root.appendChild(title);
+banner.appendChild(title);
+for(let i =0 ; i < listThemes.length ; i++){
+    const newBtn = document.createElement('button');
+    newBtn.innerHTML = listThemes[i];
+    newBtn.setAttribute('class' , classThemes);
+    navThemes.appendChild(newBtn);
+}
+banner.appendChild(navThemes);
+root.appendChild(banner);
 root.appendChild(zoneQuizz);
 root.appendChild(begin);
 root.appendChild(btnSuivant);
 
-let classBtn = 'transition duration-300 ease-in-out bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded w-1/6 mx-auto mb-7 '
+const btnThemes = banner.querySelectorAll('button');
+
+const onclickTheme = btnThemes.forEach((theme) => 
+    {theme.addEventListener('click',function(){
+        if(chooseTheme){
+            btnThemes.forEach((theme) => {theme.setAttribute('class' , classThemes)});
+            themeChosen = this.innerHTML;
+            this.setAttribute('class' , classThemesChoose);
+        }
+    })}
+);
+
+
+
+let classBtn = 'transition duration-300 ease-in-out bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded w-1/6 mx-auto my-7 '
 let derniereQuest = false;
 
 begin.setAttribute('class' , classBtn);
@@ -57,9 +92,12 @@ let aleaTable = [];
 // utiliser json
 // ________________________________________________________________________________________
 
+
+
 async function loadQuestions() {
+    let path = `./questions-${themeChosen}.json`
     try {
-        const response = await fetch('./questions-cinema-series.json');
+        const response = await fetch(path);
         if (!response.ok) throw new Error('Erreur lors du chargement du fichier JSON');
         
         const jsonData = await response.json(); // Lit le contenu JSON
@@ -97,6 +135,7 @@ async function displayQuestions() {
 
 begin.addEventListener('click', () =>{
     j = true;
+    chooseTheme = false;
     if(j){
         console.log(j);
         displayQuestions().then(tableQuestions => {
@@ -197,6 +236,7 @@ const onClick = reponsesDiv.forEach((reponse) =>
                 }
                 nbQuest++;
                 j = false;
+                
             }
         }
         
