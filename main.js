@@ -1,6 +1,9 @@
 
+const title = document.createElement('div');
+title.innerHTML = 'Le Quizz des semi-croustillants';
+
 const root = document.getElementById('root');
-const zoneQuizz =  document.createElement('session');
+const zoneQuizz =  document.createElement('section');
 const questionDiv = document.createElement('div');
 const reponse1 = document.createElement('div');
 const reponse2 = document.createElement('div');
@@ -8,25 +11,36 @@ const reponse3 = document.createElement('div');
 const reponse4 = document.createElement('div');
 const begin = document.createElement('div');
 const btnSuivant = document.createElement('div');
+classReponseQuizz = 'reponse class bg-slate-600 text-white text-center max-w-sm rounded overflow-hidden shadow-lg mx-auto mb-5 py-5 hover:bg-sky-700';
+classQuestion = 'card-title';
+classZoneQuizz = 'card border-2 border-slate-900 bg-slate-300 w-2/6 mx-auto hidden mt-5 rounded shadow-xl'
+classTitle ='text-center text-3xl mb-5';
+
 reponse1.setAttribute('class' , 'reponse');
 reponse2.setAttribute('class' , 'reponse');
 reponse3.setAttribute('class' , 'reponse');
 reponse4.setAttribute('class' , 'reponse');
+title.setAttribute('class', classTitle);
+zoneQuizz.setAttribute('class' , classZoneQuizz);
+questionDiv.setAttribute('class' , 'reponse w-1/2 mx-auto bg-transparent mb-5');
 
 zoneQuizz.appendChild(questionDiv);
 zoneQuizz.appendChild(reponse1);
 zoneQuizz.appendChild(reponse2);
 zoneQuizz.appendChild(reponse3);
 zoneQuizz.appendChild(reponse4);
+root.appendChild(title);
 root.appendChild(zoneQuizz);
 root.appendChild(begin);
 root.appendChild(btnSuivant);
 
-let classBtn = 'transition duration-300 ease-in-out bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded w-1/6 mx-auto '
+let classBtn = 'transition duration-300 ease-in-out bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded w-1/6 mx-auto mb-7 '
 let derniereQuest = false;
 
 begin.setAttribute('class' , classBtn);
-btnSuivant.setAttribute('class' , classBtn + 'hidden')
+btnSuivant.setAttribute('class' , classBtn + 'hidden');
+
+
 
 begin.innerHTML = 'Jouer';
 btnSuivant.innerHTML = "suivant";
@@ -37,13 +51,11 @@ let nbQuest = 0;
 let brep = '';
 let clicked = false;
 let score = 0;
+let aleaTable = [];
 
-
-
-
-// ___________________________________________________________________
+// ________________________________________________________________________________________
 // utiliser json
-// ____________________________________________________________________
+// ________________________________________________________________________________________
 
 async function loadQuestions() {
     try {
@@ -74,18 +86,12 @@ async function displayQuestions() {
     let table = await loadQuestions();
     let tableQuestions = [];
     let alea = Math.floor(Math.random()*table.length);
-    let aleaTable = [];
-    for (let i = 0 ; i < 10 ; i++){
-        while(aleaTable.includes(alea)){
-            alea = Math.floor(Math.random()*table.length)
-        }
-        aleaTable.push(alea);
-        tableQuestions.push(table[alea]);
+    while(aleaTable.includes(alea)){
+        alea = Math.floor(Math.random()*table.length)
     }
-
-    
+    aleaTable.push(alea);
+    tableQuestions.push(table[alea]);
     return tableQuestions
-
 }
 
 
@@ -94,10 +100,10 @@ begin.addEventListener('click', () =>{
     if(j){
         console.log(j);
         displayQuestions().then(tableQuestions => {
-            brep = tableQuestions[nbQuest].bonne_reponse;
-            let tabReponse = melangeReponse(brep, tableQuestions[nbQuest].mauvaises_reponses);
-            console.log(tableQuestions[nbQuest]);
-            afficheQuestion(tableQuestions[nbQuest].Question, tabReponse);
+            brep = tableQuestions[0].bonne_reponse;
+            let tabReponse = melangeReponse(brep, tableQuestions[0].mauvaises_reponses);
+            console.log(tableQuestions[0]);
+            afficheQuestion(tableQuestions[0].Question, tabReponse);
             begin.classList.add('hidden');
         })
     }   
@@ -117,10 +123,10 @@ btnSuivant.addEventListener('click', () =>{
     } else if(j){
         
         displayQuestions().then(tableQuestions => {
-            brep = tableQuestions[nbQuest].bonne_reponse;
-            let tabReponse = melangeReponse(brep, tableQuestions[nbQuest].mauvaises_reponses);
-            console.log(tableQuestions[nbQuest]);
-            afficheQuestion(tableQuestions[nbQuest].Question, tabReponse);
+            brep = tableQuestions[0].bonne_reponse;
+            let tabReponse = melangeReponse(brep, tableQuestions[0].mauvaises_reponses);
+            console.log(tableQuestions[0]);
+            afficheQuestion(tableQuestions[0].Question, tabReponse);
             begin.classList.add('hidden');
         })
     }   
@@ -129,7 +135,7 @@ btnSuivant.addEventListener('click', () =>{
     }
 })
 
-//______________________________________________________________________
+//_____________________________________________________________________________________________
 
 
 
@@ -161,6 +167,11 @@ function afficheQuestion(question, rep){
     reponse2.innerHTML = rep[1];
     reponse3.innerHTML = rep[2];
     reponse4.innerHTML = rep[3];
+    reponse1.setAttribute('class' , classReponseQuizz);
+    reponse2.setAttribute('class' , classReponseQuizz);
+    reponse3.setAttribute('class' , classReponseQuizz);
+    reponse4.setAttribute('class' , classReponseQuizz);
+    zoneQuizz.classList.remove('hidden');
 }
 
 const onClick = reponsesDiv.forEach((reponse) => 
@@ -188,7 +199,7 @@ const onClick = reponsesDiv.forEach((reponse) =>
                 j = false;
             }
         }
-        console.log(clicked);
+        
     })
 );
 
