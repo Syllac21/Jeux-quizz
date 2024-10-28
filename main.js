@@ -48,11 +48,14 @@ path.setAttribute("d","M4 6h16M4 12h16m-7 6h7");
 
 ul.setAttribute("class", "hidden md:flex space-x-16 justify-end");
 li.setAttribute("class", "text-white");
+li.setAttribute("id","theme_desk")
 li1.setAttribute("class", "text-white");
+
 ul1.setAttribute("class", "hidden md:hidden flex flex-col space-y-5 mt-4");
 ul1.setAttribute("id", "menu");
 li2.setAttribute("class", "border border-red-600");
 li3.setAttribute("class", "text-white block mt-1");
+li3.setAttribute("id","theme_tel");
 li4.setAttribute("class", "text-white block");
 
 // Insérer les éléments dans les parents
@@ -73,8 +76,50 @@ ul1.appendChild(li4);
 
 document.body.appendChild(nav);
 
- // Fonction pour le menu burger de la nav
- document.getElementById('burger').addEventListener('click', function() {
+
+const thememenu = document.getElementById("theme");
+
+// fonction pour le menu burger de la nav
+document.getElementById('burger').addEventListener('click', function() {
     const menu = document.getElementById('menu');
     menu.classList.toggle('hidden');
+    console.log(ThemeOpen);
+    if (ThemeOpen = true){
+        thememenu.classList.toggle("hidden");
+        ThemeOpen = false;
+    }
+    if (ThemeOpen === false){
+        thememenu.classList.add("hidden");
+    }
 });
+
+// Kaique :
+
+//fonction pour le menu theme
+let ThemeOpen = false;
+
+//Mobile
+document.getElementById("theme_tel").addEventListener("click", function(){
+    const thememenu = document.getElementById("theme");
+    thememenu.classList.toggle("hidden");
+    ThemeOpen = true;
+})
+
+//Desktop
+document.getElementById("theme_desk").addEventListener("click", function(){
+    const thememenu = document.getElementById("theme");
+    thememenu.classList.toggle("md:hidden");
+    ThemeOpen = true;
+})
+
+
+
+//image pas bon!!!!
+
+const divImage = document.createElement("div");
+divImage.setAttribute("class", "flex justify-center");
+const imgQuizz = new Image();
+imgQuizz.src = "img/Designer1.jpeg";
+imgQuizz.onload = function() {
+ document.body.appendChild(imgQuizz);
+};
