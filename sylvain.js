@@ -1,4 +1,4 @@
-const listThemes = ['cinema-series', 'foot']
+const listThemes = ['cinema', 'foot']
 const classThemes = 'mx-auto';
 const classThemesChoose = 'mx-auto bg-slate-600';
 const banner = document.createElement('header');
@@ -95,7 +95,7 @@ let aleaTable = [];
 
 
 async function loadQuestions() {
-    let path = `./questions-${themeChosen}.json`
+    let path = `./${themeChosen}DATA.json`
     try {
         const response = await fetch(path);
         if (!response.ok) throw new Error('Erreur lors du chargement du fichier JSON');
