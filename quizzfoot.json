@@ -1,0 +1,155 @@
+{
+    "quiz": [
+        {
+            "question": "Quel joueur a remporté le Ballon d'Or en 2021 ?",
+            "bonne_reponse": "Lionel Messi",
+            "mauvaises_reponses": ["Cristiano Ronaldo", "Robert Lewandowski", "Karim Benzema"]
+        },
+        {
+            "question": "Quel pays a remporté la Coupe du Monde de la FIFA en 2018 ?",
+            "bonne_reponse": "France",
+            "mauvaises_reponses": ["Croatie", "Brésil", "Allemagne"]
+        },
+        {
+            "question": "Quel club a remporté la Ligue des Champions de l'UEFA en 2020 ?",
+            "bonne_reponse": "Bayern Munich",
+            "mauvaises_reponses": ["Paris Saint-Germain", "Liverpool", "Real Madrid"]
+        },
+        {
+            "question": "Quel joueur détient le record du plus grand nombre de buts en Coupe du Monde ?",
+            "bonne_reponse": "Miroslav Klose",
+            "mauvaises_reponses": ["Pelé", "Ronaldo", "Gerd Müller"]
+        },
+        {
+            "question": "Quel club est surnommé Les Red Devils ?",
+            "bonne_reponse": "Manchester United",
+            "mauvaises_reponses": ["Liverpool", "Arsenal", "Chelsea"]
+        },
+        {
+            "question": "Quel joueur est connu sous le surnom de El Pibe de Oro ?",
+            "bonne_reponse": "Diego Maradona",
+            "mauvaises_reponses": ["Lionel Messi", "Pelé", "Ronaldinho"]
+        },
+        {
+            "question": "Quel pays a remporté le plus de Coupes du Monde de la FIFA ?",
+            "bonne_reponse": "Brésil",
+            "mauvaises_reponses": ["Allemagne", "Italie", "Argentine"]
+        },
+        {
+            "question": "Quel joueur a marqué le but de la Main de Dieu en Coupe du Monde ?",
+            "bonne_reponse": "Diego Maradona",
+            "mauvaises_reponses": ["Lionel Messi", "Cristiano Ronaldo", "Zinedine Zidane"]
+        },
+        {
+            "question": "Quel club a remporté le plus de titres de Premier League ?",
+            "bonne_reponse": "Manchester United",
+            "mauvaises_reponses": ["Liverpool", "Chelsea", "Arsenal"]
+        },
+        {
+            "question": "Quel joueur a remporté le plus de Ballons d'Or ?",
+            "bonne_reponse": "Lionel Messi",
+            "mauvaises_reponses": ["Cristiano Ronaldo", "Michel Platini", "Johan Cruyff"]
+        },
+        {
+            "question": "Quel pays a remporté l'Euro 2020 ?",
+            "bonne_reponse": "Italie",
+            "mauvaises_reponses": ["Angleterre", "Espagne", "France"]
+        },
+        {
+            "question": "Quel joueur est surnommé CR7 ?",
+            "bonne_reponse": "Cristiano Ronaldo",
+            "mauvaises_reponses": ["Lionel Messi", "Neymar", "Kylian Mbappé"]
+        },
+        {
+            "question": "Quel club a remporté la Ligue 1 en 2021 ?",
+            "bonne_reponse": "Lille OSC",
+            "mauvaises_reponses": ["Paris Saint-Germain", "Olympique Lyonnais", "AS Monaco"]
+        },
+        {
+            "question": "Quel joueur a marqué le but décisif en finale de la Coupe du Monde 2014 ?",
+            "bonne_reponse": "Mario Götze",
+            "mauvaises_reponses": ["Lionel Messi", "Thomas Müller", "Neymar"]
+        },
+        {
+            "question": "Quel club est surnommé Les Blaugranas ?",
+            "bonne_reponse": "FC Barcelone",
+            "mauvaises_reponses": ["Real Madrid", "Atlético Madrid", "Valence CF"]
+        },
+        {
+            "question": "Quel joueur a remporté le Soulier d'Or européen en 2021 ?",
+            "bonne_reponse": "Robert Lewandowski",
+            "mauvaises_reponses": ["Lionel Messi", "Cristiano Ronaldo", "Kylian Mbappé"]
+        },
+        {
+            "question": "Quel pays a remporté la Copa América en 2021 ?",
+            "bonne_reponse": "Argentine",
+            "mauvaises_reponses": ["Brésil", "Uruguay", "Colombie"]
+        },
+        {
+            "question": "Quel joueur est surnommé La Pulga ?",
+            "bonne_reponse": "Lionel Messi",
+            "mauvaises_reponses": ["Sergio Agüero", "Neymar", "Luis Suárez"]
+        },
+        {
+            "question": "Quel club a remporté la Serie A en 2021 ?",
+            "bonne_reponse": "Inter Milan",
+            "mauvaises_reponses": ["Juventus", "AC Milan", "Napoli"]
+        },
+        {
+            "question": "Quel joueur a marqué le plus de buts en une saison de Premier League ?",
+            "bonne_reponse": "Mohamed Salah",
+            "mauvaises_reponses": ["Harry Kane", "Sergio Agüero", "Thierry Henry"]
+        },
+        {
+            "question": "Quel pays a remporté la Coupe d'Afrique des Nations en 2019 ?",
+            "bonne_reponse": "Algérie",
+            "mauvaises_reponses": ["Sénégal", "Égypte", "Côte d\"Ivoire"]
+        },
+        {
+            "question": "Quel joueur est surnommé Il Fenomeno ?",
+            "bonne_reponse": "Ronaldo",
+            "mauvaises_reponses": ["Ronaldinho", "Romário", "Pelé"]
+        },
+        {
+            "question": "Quel club a remporté la Bundesliga en 2021 ?",
+            "bonne_reponse": "Bayern Munich",
+            "mauvaises_reponses": ["Borussia Dortmund", "RB Leipzig", "Bayer Leverkusen"]
+        },
+        {
+            "question": "Quel joueur a remporté le prix Puskás en 2021 ?",
+            "bonne_reponse": "Erik Lamela",
+            "mauvaises_reponses": ["Lionel Messi", "Cristiano Ronaldo", "Neymar"]
+        },
+        {
+            "question": "Quel pays a remporté la Coupe du Monde féminine de la FIFA en 2019 ?",
+            "bonne_reponse": "États-Unis",
+            "mauvaises_reponses": ["Pays-Bas", "Allemagne", "Angleterre"]
+        },
+        {
+            "question": "Quel joueur est surnommé Zizou ?",
+            "bonne_reponse": "Zinedine Zidane",
+            "mauvaises_reponses": ["Thierry Henry", "Michel Platini", "Patrick Vieira"]
+        },
+        {
+            "question": "Quel club a remporté la Ligue Europa en 2021 ?",
+            "bonne_reponse": "Villarreal CF",
+            "mauvaises_reponses": ["Manchester United", "Sevilla FC", "Arsenal"]
+        },
+        {
+            "question": "Quel joueur a marqué le plus de buts en Ligue des Champions de l'UEFA ?",
+            "bonne_reponse": "Cristiano Ronaldo",
+            "mauvaises_reponses": ["Lionel Messi", "Robert Lewandowski", "Raúl"]
+        },
+        {
+            "question": "Quel pays a remporté la Coupe du Monde de la FIFA en 2006 ?",
+            "bonne_reponse": "Italie",
+            "mauvaises_reponses": ["France", "Brésil", "Allemagne"]
+        },
+        {
+            "question": "Quel joueur est surnommé El Niño ?",
+            "bonne_reponse": "Fernando Torres",
+            "mauvaises_reponses": ["David Villa", "Sergio Ramos", "Andrés Iniesta"]
+        }
+    ]
+}
+
