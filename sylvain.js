@@ -191,7 +191,7 @@ let chooseTheme = 'true'
 
 classReponseQuizz = 'reponse class bg-slate-600 text-white text-center max-w-sm rounded overflow-hidden shadow-lg mx-auto mb-5 py-3 hover:bg-sky-700';
 classQuestion = 'card-title';
-classZoneQuizz = 'card border-2 border-slate-900 bg-slate-300 w-3/6 mx-auto hidden mt-5 rounded shadow-xl'
+classZoneQuizz = 'card border-2 border-slate-900 bg-slate-300 w-full md:w-3/6 mx-auto hidden mt-5 rounded shadow-xl'
 classTitle ='text-center text-3xl mb-5';
 
 reponse1.setAttribute('class' , 'reponse');
@@ -320,7 +320,7 @@ btnSuivant.addEventListener('click', () =>{
     reponse2.setAttribute('class' , 'reponse');
     reponse3.setAttribute('class' , 'reponse');
     reponse4.setAttribute('class' , 'reponse');
-    
+
     //Quizz function : ending
     if(derniereQuest){
         zoneQuizz.classList.add('hidden');
