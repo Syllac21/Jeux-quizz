@@ -1,6 +1,5 @@
 // Créer les éléments de la navbar
 const nav = document.createElement("nav");
-//const titre = document.createElement("h1")
 const div = document.createElement("div");
 const aAcceuil = document.createElement("a");
 const div1 = document.createElement("div");
@@ -17,7 +16,6 @@ const li4 = document.createElement("li");
 
 // Ajouter du texte aux éléments li
 aAcceuil.textContent = "Accueil";
-//titre.textContent = "Quizz";
 li.textContent = "Thème";
 li1.textContent = "Inscription";
 li3.textContent = "Thème";
@@ -25,7 +23,6 @@ li4.textContent = "Inscription";
 
 // Ajouter classes et id à chaque élément de la nav
 nav.setAttribute("class", "bg-gray-800 p-4");
-//titre.setAttribute("class","text-white text-xl  flex items-center justify-center");
 div.setAttribute("class", "flex justify-between text-center items-center");
 aAcceuil.setAttribute("class", "text-white text-lg justify-start");
 div1.setAttribute("class", "md:hidden");
@@ -45,12 +42,13 @@ path.setAttribute("stroke-linejoin","round");
 path.setAttribute("stroke-width","2");
 path.setAttribute("d","M4 6h16M4 12h16m-7 6h7");
 
-
+//pour le menu simle
 ul.setAttribute("class", "hidden md:flex space-x-16 justify-end");
 li.setAttribute("class", "text-white");
 li.setAttribute("id","theme_desk")
 li1.setAttribute("class", "text-white");
 
+//pour le menu burger
 ul1.setAttribute("class", "hidden md:hidden flex flex-col space-y-5 mt-4");
 ul1.setAttribute("id", "menu");
 li2.setAttribute("class", "border border-red-600");
@@ -59,7 +57,6 @@ li3.setAttribute("id","theme_tel");
 li4.setAttribute("class", "text-white block");
 
 // Insérer les éléments dans les parents
-//nav.appendChild(titre);
 nav.appendChild(div);
 div.appendChild(aAcceuil);
 div.appendChild(div1);
@@ -113,13 +110,16 @@ document.getElementById("theme_desk").addEventListener("click", function(){
 })
 
 
-
-//image pas bon!!!!
-
+// Créer une nouvelle div
 const divImage = document.createElement("div");
+// Ajouter des classes à la div
 divImage.setAttribute("class", "flex justify-center");
+// Créer un nouvel élément image
 const imgQuizz = new Image();
+// Définir la source de l'image
 imgQuizz.src = "img/Designer1.jpeg";
-imgQuizz.onload = function() {
- document.body.appendChild(imgQuizz);
-};
+// Ajouter l'image à la div
+divImage.appendChild(imgQuizz);
+// Ajouter la div au body ou à un autre élément parent
+document.body.appendChild(divImage);
+ 
