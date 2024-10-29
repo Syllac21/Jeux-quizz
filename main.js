@@ -109,7 +109,7 @@ document.getElementById("theme_desk").addEventListener("click", function(){
     ThemeOpen = true;
 })
 
-
+//image Quizz
 // Créer une nouvelle div
 const divImage = document.createElement("div");
 // Ajouter des classes à la div
