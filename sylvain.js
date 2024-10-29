@@ -151,6 +151,24 @@ document.getElementById('burger').addEventListener('click', function() {
         thememenu.classList.add("hidden");
     }
 });
+//______________________________________________________________________________________________//
+//Image centre
+
+// Créer une nouvelle div
+const divImage = document.createElement("div");
+// Ajouter des classes à la div
+divImage.setAttribute("class", "flex justify-center bg-[#f2e6d7]");
+// Créer un nouvel élément image
+const imgQuizz = new Image();
+// Définir la source de l'image
+imgQuizz.src = "img/Designer1.jpeg";
+// Ajouter l'image à la div
+divImage.appendChild(imgQuizz);
+// Ajouter la div au body ou à un autre élément parent
+root.appendChild(divImage);
+
+//__________________________________________________________________________________________________//
+
 
 
 //Back end code Sylv. et jerem
@@ -166,7 +184,7 @@ const classdivThemes ='flex justify-center items-center';
 divpickThemes.setAttribute('class' , classdivThemes);
 
 const title = document.createElement('div');
-title.innerHTML = 'Le Quizz des semi-croustillants';
+
 
 let themeChosen = 'cinema';
 let chooseTheme = 'true'
@@ -182,14 +200,14 @@ reponse3.setAttribute('class' , 'reponse');
 reponse4.setAttribute('class' , 'reponse');
 title.setAttribute('class', classTitle);
 zoneQuizz.setAttribute('class' , classZoneQuizz);
-questionDiv.setAttribute('class' , 'reponse w-1/2 mx-auto bg-transparent mb-5');
+questionDiv.setAttribute('class' , 'text-pretty reponse w-1/2 mx-auto bg-transparent mb-5 md:text-wrap');
 
 zoneQuizz.appendChild(questionDiv);
 zoneQuizz.appendChild(reponse1);
 zoneQuizz.appendChild(reponse2);
 zoneQuizz.appendChild(reponse3);
 zoneQuizz.appendChild(reponse4);
-banner.appendChild(title);
+
 for(let i =0 ; i < listThemes.length ; i++){
     const newBtn = document.createElement('button');
     newBtn.innerHTML = listThemes[i];
@@ -216,7 +234,7 @@ const onclickTheme = btnThemes.forEach((theme) =>
 
 
 
-let classBtn = 'transition duration-300 ease-in-out bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded w-1/6 mx-auto my-7 '
+let classBtn = 'text-center transition duration-300 ease-in-out bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 rounded w-1/6 mx-auto my-7 '
 let derniereQuest = false;
 
 begin.setAttribute('class' , classBtn);
@@ -302,9 +320,12 @@ btnSuivant.addEventListener('click', () =>{
     reponse2.setAttribute('class' , 'reponse');
     reponse3.setAttribute('class' , 'reponse');
     reponse4.setAttribute('class' , 'reponse');
+    
+    //Quizz function : ending
     if(derniereQuest){
         zoneQuizz.classList.add('hidden');
         btnSuivant.classList.add('hidden');
+        //Need to change ending, and reset game.
         root.innerHTML = `vous avez eu ${score} bonnes réponses`;
     } else if(j){
         
