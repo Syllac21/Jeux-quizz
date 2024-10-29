@@ -30,7 +30,7 @@ for (let i= 0; i < DivAmount; i++){
     div[i].setAttribute("class", "");
 }
 
-//UL
+//UL elements
 
 //creation ul
 const ulAmount = 2;
@@ -40,19 +40,117 @@ for ( let i = 0;i <ulAmount; i++){
     ul[i].setAttribute("class", "");
 }
 
-//
+//LI elements
+
+//creation Lis
+const liAmount = 5;
+let li = [];
+for ( let i = 0; i < liAmount; i++){
+    li[i] = document.createElement("li");
+    li[i].setAttribute("class", "");
+}
+
+// appending elements
+
+//inside the nav bar
+NavBar.appendChild(div[0]);
+const navdivStyle = "flex justify-between text-center items-center";
+div[0].setAttribute("class", navdivStyle);
+
+NavBar.appendChild(ul[0]);
+const ul0Style = "hidden md:hidden flex flex-col space-y-5 mt-4";
+ul[0].setAttribute("class", ul0Style);
+ul[0].setAttribute("id", "menu");
 
 
 
+//inside div________________________________________________________________________________//
+
+//Anchor elment
+const aAcceuil = document.createElement("a");
+aAcceuil.textContent = "Accueil";
+aAcceuil.setAttribute("class", "text-white text-lg justify-start");
+div[0].appendChild(aAcceuil)
+
+//div1 inside nav/div/div1
+div[1].setAttribute("class", "md:hidden");
+div[0].appendChild(div[1]);
+
+//boutton 
+const buttonburger = document.createElement("button");
+buttonburger.setAttribute("id", "burger");
+buttonburger.setAttribute("class", "text-white focus:outline-none");
+div[1].appendChild(buttonburger);
+
+//SVG
+const svg = document.createElementNS("http://www.w3.org/2000/svg","svg");
+svg.setAttribute("class", "w-6 h-6");
+svg.setAttribute("fill", "none");
+svg.setAttribute("stroke", "currentColor");
+svg.setAttribute("viewBox", "0 0 24 24");
+svg.setAttribute("xmlns", "http://www.w3.org/2000/svg");
+buttonburger.appendChild(svg);
+
+//Path
+const path = document.createElementNS("http://www.w3.org/2000/svg", "path");
+path.setAttribute("stroke-linecap","round");
+path.setAttribute("stroke-linejoin","round"); 
+path.setAttribute("stroke-width","2");
+path.setAttribute("d","M4 6h16M4 12h16m-7 6h7");
+svg.appendChild(path);
 
 
+//ul inside nav/div/ul
+const ul1Style = "hidden md:flex space-x-16 justify-end";
+ul[1].setAttribute("class", ul1Style);
+div[0].appendChild(ul[1]);
 
+//elements from UL1
+ul[1].appendChild(li[0]);
+ul[1].appendChild(li[1]);
+const ul1LiStyle = "text-white"
 
+li[0].setAttribute("id", "theme_desk");
 
+li[0].setAttribute("class", ul1LiStyle);
+li[1].setAttribute("class", ul1LiStyle);
 
+li[0].textContent = "Thème"
+li[1].textContent = "Inscription"
 
+//__________________________________________________________________________________________//
 
+//inside NAV/UL  (li2 - li5)
 
+ul[0].appendChild(li[2]);
+ul[0].appendChild(li[3]);
+ul[0].appendChild(li[4]);
+
+li[2].setAttribute("class", "border border-red-600");
+li[3].setAttribute("class", "text-white block mt-1");
+li[3].setAttribute("id", "theme_tel");
+li[4].setAttribute("class", "text-white block");
+
+li[3].textContent = "Thème"
+li[4].textContent = "Inscription"
+
+//____________________________________________________________________________________________//
+
+const thememenu = document.getElementById("theme");
+
+// fonction pour le menu burger de la nav
+document.getElementById('burger').addEventListener('click', function() {
+    const menu = document.getElementById('menu');
+    menu.classList.toggle('hidden');
+    console.log(ThemeOpen);
+    if (ThemeOpen = true){
+        thememenu.classList.toggle("hidden");
+        ThemeOpen = false;
+    }
+    if (ThemeOpen === false){
+        thememenu.classList.add("hidden");
+    }
+});
 
 
 //Back end code Sylv. et jerem
