@@ -1,6 +1,50 @@
+//init sylv elements
+
+const root = document.getElementById('root'); //first thing
+const zoneQuizz =  document.createElement('section');
+const questionDiv = document.createElement('div');
+const reponse1 = document.createElement('div');
+const reponse2 = document.createElement('div');
+const reponse3 = document.createElement('div');
+const reponse4 = document.createElement('div');
+const begin = document.createElement('div');
+const btnSuivant = document.createElement('div');
+
 //creation front yannick et me
 
+
 //NAV
+const NavBar = document.createElement("nav");
+const NavBarStyle = "bg-gray-800 p-4";
+NavBar.setAttribute("class", NavBarStyle);
+root.appendChild(NavBar);
+
+//Divs 
+
+//creation divs
+const DivAmount = 3;
+let div = [];
+for (let i= 0; i < DivAmount; i++){
+    //console.log(i);
+    div[i] = document.createElement("div");
+    div[i].setAttribute("class", "");
+}
+
+//UL
+
+//creation ul
+const ulAmount = 2;
+let ul = [];
+for ( let i = 0;i <ulAmount; i++){
+    ul[i] =  document.createElement("ul");
+    ul[i].setAttribute("class", "");
+}
+
+//
+
+
+
+
 
 
 
@@ -29,15 +73,6 @@ title.innerHTML = 'Le Quizz des semi-croustillants';
 let themeChosen = 'cinema';
 let chooseTheme = 'true'
 
-const root = document.getElementById('root');
-const zoneQuizz =  document.createElement('section');
-const questionDiv = document.createElement('div');
-const reponse1 = document.createElement('div');
-const reponse2 = document.createElement('div');
-const reponse3 = document.createElement('div');
-const reponse4 = document.createElement('div');
-const begin = document.createElement('div');
-const btnSuivant = document.createElement('div');
 classReponseQuizz = 'reponse class bg-slate-600 text-white text-center max-w-sm rounded overflow-hidden shadow-lg mx-auto mb-5 py-3 hover:bg-sky-700';
 classQuestion = 'card-title';
 classZoneQuizz = 'card border-2 border-slate-900 bg-slate-300 w-3/6 mx-auto hidden mt-5 rounded shadow-xl'
