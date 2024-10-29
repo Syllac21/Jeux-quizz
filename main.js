@@ -113,7 +113,7 @@ document.getElementById("theme_desk").addEventListener("click", function(){
 // Créer une nouvelle div
 const divImage = document.createElement("div");
 // Ajouter des classes à la div
-divImage.setAttribute("class", "flex justify-center");
+divImage.setAttribute("class", "flex justify-center bg-[#f2e6d7]");
 // Créer un nouvel élément image
 const imgQuizz = new Image();
 // Définir la source de l'image
