@@ -1,3 +1,17 @@
+//creation front yannick et me
+
+//NAV
+
+
+
+
+
+
+
+
+
+
+//Back end code Sylv. et jerem
 const listThemes = ['cinema', 'foot']
 const classThemes = 'mx-auto';
 const classThemesChoose = 'mx-auto bg-slate-600';
@@ -5,9 +19,9 @@ const banner = document.createElement('header');
 const classBanner = 'bg-slate-900 text-white';
 banner.setAttribute('class' , classBanner);
 
-const navThemes = document.createElement('nav');
-const classNav ='flex justify-center items-center';
-navThemes.setAttribute('class' , classNav);
+const divpickThemes = document.createElement('div'); //modif from nav to div
+const classdivThemes ='flex justify-center items-center';
+divpickThemes.setAttribute('class' , classdivThemes);
 
 const title = document.createElement('div');
 title.innerHTML = 'Le Quizz des semi-croustillants';
@@ -47,9 +61,9 @@ for(let i =0 ; i < listThemes.length ; i++){
     const newBtn = document.createElement('button');
     newBtn.innerHTML = listThemes[i];
     newBtn.setAttribute('class' , classThemes);
-    navThemes.appendChild(newBtn);
+    divpickThemes.appendChild(newBtn);
 }
-banner.appendChild(navThemes);
+banner.appendChild(divpickThemes);
 root.appendChild(banner);
 root.appendChild(zoneQuizz);
 root.appendChild(begin);
