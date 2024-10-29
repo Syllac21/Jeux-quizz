@@ -215,7 +215,3 @@ document.getElementById('burger').addEventListener('click', function() {
         thememenu.classList.add("hidden");
     }
 });
-
-
-
-
