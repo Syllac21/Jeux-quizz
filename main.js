@@ -73,7 +73,7 @@ ul1.appendChild(li4);
 
 document.body.appendChild(nav);
 
-
+/* -------------------------------------- */
 
 //image Quizz
 // Créer une nouvelle div
